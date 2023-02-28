@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33402.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog_124_W24_Lecture_15_Saving_CSV", "Prog_124_W24_Lecture_15_Saving_CSV.csproj", "{A8CC06BF-2C55-43A3-9233-9DD223CE8B29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8CC06BF-2C55-43A3-9233-9DD223CE8B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CC06BF-2C55-43A3-9233-9DD223CE8B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CC06BF-2C55-43A3-9233-9DD223CE8B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CC06BF-2C55-43A3-9233-9DD223CE8B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C6FF459-36BF-44AF-8B9B-EBC996D483B6}
+	EndGlobalSection
+EndGlobal
