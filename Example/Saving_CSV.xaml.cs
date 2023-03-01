@@ -30,12 +30,12 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
             InitializeComponent();
             players.Add(new Player("Will", "123"));
             players.Add(new Player("Anne", "123"));
-            SaveList();
+            //SaveList();
         } // Saving_CSV
 
         private void btnSaveToFile_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileRecords();
+            //SaveFileRecords();
             
         } // btnSaveToFile_Click()
 

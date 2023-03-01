@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prog_124_W24_Lecture_15_Saving_CSV"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" Background="#FFECB9B9">
+    <Canvas>
+        <Canvas Height="348" Width="326" Canvas.Left="74" Canvas.Top="43" Background="#FF5498B5" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Content="First Name" Canvas.Left="52" Canvas.Top="38"/>
+            <TextBox x:Name="txtFirstName" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="69" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Grade" Canvas.Left="52" Canvas.Top="107" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtGrade" Canvas.Left="52" TextWrapping="Wrap" Canvas.Top="138" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnSaveGrade" Content="Save Grade" Canvas.Left="47" Canvas.Top="197" Height="44" Width="232" Click="btnSaveGrade_Click"/>
+        </Canvas>
+        <Button x:Name="btnSaveList" Content="Save List" Canvas.Left="495" Canvas.Top="261" Height="45" Width="164" Click="btnSaveList_Click"/>
 
-    </Grid>
+    </Canvas>
 </Window>

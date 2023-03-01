@@ -1,4 +1,4 @@
-﻿using CsvHelper;
+﻿//using CsvHelper;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -26,7 +26,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
         public CSV_Example()
         {
             InitializeComponent();
-            ReadFile_Players();
+            //ReadFile_Players();
         } // CSV_Example()
 
         public void ReadFile()
@@ -49,80 +49,81 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
 
         // https://zetcode.com/csharp/csv/
 
-        public void ReadFileCSV_Helper()
-        {
-            string filePath = FileLocation.csvLocation;
+        //public void ReadFileCSV_Helper()
+        //{
+        //    string filePath = FileLocation.csvLocation;
 
-            using(StreamReader reader = new StreamReader(filePath))
-            {
-                using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                {
-                    while(csv.Read())
-                    {
-                        string val1 = csv.GetField(0);
-                        string val2 = csv.GetField(1);
-                        string val3 = csv.GetField(2);
+        //    using(StreamReader reader = new StreamReader(filePath))
+        //    {
+        //        using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        //        {
+        //            while(csv.Read())
+        //            {
+        //                string val1 = csv.GetField(0);
+        //                string val2 = csv.GetField(1);
+        //                string val3 = csv.GetField(2);
 
-                        runDisplay.Text += $"{val1} \n" +
-                            $"{val2} \n " +
-                            $"{val3} \n";
+        //                runDisplay.Text += $"{val1} \n" +
+        //                    $"{val2} \n " +
+        //                    $"{val3} \n";
 
-                    }
-                }
-            }
-        }
+        //            }
+        //        }
+        //    }
+        //}
 
-        public void ReadFileCSV_Helper2()
-        {
-            string filePath = Directory.GetCurrentDirectory() + @"\Example\CSV_Files\data.csv";
+        //public void ReadFileCSV_Helper2()
+        //{
+        //    string filePath = Directory.GetCurrentDirectory() + @"\Example\CSV_Files\data.csv";
 
-            using (StreamReader reader = new StreamReader(filePath))
-            {
-                using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                {
+        //    using (StreamReader reader = new StreamReader(filePath))
+        //    {
+        //        using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        //        {
 
-                    while (csv.Read())
-                    {
+        //            while (csv.Read())
+        //            {
 
-                        int val1 = csv.GetField<int>(0);
-                        double val2 = csv.GetField<double>(1);
-                        string val3 = csv.GetField(2);
+        //                int val1 = csv.GetField<int>(0);
+        //                double val2 = csv.GetField<double>(1);
+        //                string val3 = csv.GetField(2);
 
-                        runDisplay.Text += $"{val1} \n" +
-                            $"{val2} \n " +
-                            $"{val3} \n";
+        //                runDisplay.Text += $"{val1} \n" +
+        //                    $"{val2} \n " +
+        //                    $"{val3} \n";
 
-                    }
-
-
-                }
-            }
+        //            }
 
 
-        } // ReadFileCSV_Helper()
+        //        }
+        //    }
 
-        public void ReadFile_Players()
-        {
-            // Users static location
-            using(var reader = new StreamReader(FileLocation.playersLocation))
-            using(var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                // Skips Header
-                csv.Read();
-                csv.ReadHeader();
 
-                while (csv.Read())
-                {
-                    string name = csv.GetField(0);
-                    string hp = csv.GetField(1);
+        //} // ReadFileCSV_Helper()
 
-                    players.Add(new Player(name, hp));
-                }
+        //public void ReadFile_Players()
+        //{
+        //    // Users static location
+        //    using(var reader = new StreamReader(FileLocation.playersLocation))
+        //    using(var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        //    {
+        //        // Skips Header
+        //        csv.Read();
+        //        csv.ReadHeader();
 
-            }
+        //        // Looks at each individual line
+        //        while (csv.Read())
+        //        {
+        //            string name = csv.GetField(0);
+        //            string hp = csv.GetField(1);
 
-            MessageBox.Show(players.Count.ToString());
-        }
+        //            players.Add(new Player(name, hp));
+        //        }
+
+        //    }
+
+        //    MessageBox.Show(players.Count.ToString());
+        //}
 
 
 
