@@ -23,7 +23,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV
         public MainWindow()
         {
             InitializeComponent();
-            new Example.Saving_CSV().Show();
+            new Example.CSV_Example().Show();
         }
     }
 }

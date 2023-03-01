@@ -1,6 +1,7 @@
 ﻿using CsvHelper;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,11 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
     /// </summary>
     public partial class CSV_Example : Window
     {
+        List<Player> players = new List<Player>();
         public CSV_Example()
         {
             InitializeComponent();
-            ReadFileCSV_Helper();
+            ReadFile_Players();
         } // CSV_Example()
 
         public void ReadFile()
@@ -53,7 +55,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
 
             using(StreamReader reader = new StreamReader(filePath))
             {
-                using (CsvReader csv = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+                using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
                     while(csv.Read())
                     {
@@ -76,7 +78,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
 
             using (StreamReader reader = new StreamReader(filePath))
             {
-                using (CsvReader csv = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture))
+                using (CsvReader csv = new CsvReader(reader, CultureInfo.InvariantCulture))
                 {
 
                     while (csv.Read())
@@ -98,6 +100,29 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
 
 
         } // ReadFileCSV_Helper()
+
+        public void ReadFile_Players()
+        {
+            // Users static location
+            using(var reader = new StreamReader(FileLocation.playersLocation))
+            using(var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                // Skips Header
+                csv.Read();
+                csv.ReadHeader();
+
+                while (csv.Read())
+                {
+                    string name = csv.GetField(0);
+                    string hp = csv.GetField(1);
+
+                    players.Add(new Player(name, hp));
+                }
+
+            }
+
+            MessageBox.Show(players.Count.ToString());
+        }
 
 
 
