@@ -49,7 +49,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
 
         public void ReadFileCSV_Helper()
         {
-            string filePath = Directory.GetCurrentDirectory() + @"\Example\CSV_Files\data.csv";
+            string filePath = FileLocation.csvLocation;
 
             using(StreamReader reader = new StreamReader(filePath))
             {
