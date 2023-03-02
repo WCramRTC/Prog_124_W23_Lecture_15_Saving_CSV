@@ -30,12 +30,13 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV
         public MainWindow()
         {
             InitializeComponent();
-            MySaveToFile();
+            new Example.CSV_Example().Show();
+            //MySaveToFile();
 
-            players.Add(new Player("Suleman", 10, "Seahawks"));
-            players.Add(new Player("Bander", 113, "Seahawks"));
-            players.Add(new Player("Will", 7, "49ers"));
-            players.Add(new Player("Zach", 9, "Seahawks"));
+            //players.Add(new Player("Suleman", 10, "Seahawks"));
+            //players.Add(new Player("Bander", 113, "Seahawks"));
+            //players.Add(new Player("Will", 7, "49ers"));
+            //players.Add(new Player("Zach", 9, "Seahawks"));
 
 
         }

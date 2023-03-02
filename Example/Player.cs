@@ -17,7 +17,14 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
             _hp = hp;
         }
 
+        public Player() { }
+
         public string Name { get => _name; set => _name = value; }
         public string Hp { get => _hp; set => _hp = value; }
+
+        public override string ToString()
+        {
+            return $"Name: {_name} - HP: {_hp}";
+        }
     }
 }

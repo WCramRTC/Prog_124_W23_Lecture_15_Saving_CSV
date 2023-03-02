@@ -1,4 +1,5 @@
 ﻿//using CsvHelper;
+using CsvHelper;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -27,6 +28,7 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
         {
             InitializeComponent();
             //ReadFile_Players();
+            ReadPlayerFile();
         } // CSV_Example()
 
         public void ReadFile()
@@ -125,6 +127,29 @@ namespace Prog_124_W24_Lecture_15_Saving_CSV.Example
         //    MessageBox.Show(players.Count.ToString());
         //}
 
+        public void ReadPlayerFile()
+        {
+            string filePath = Directory.GetCurrentDirectory() + @"\CSV_Files\players.csv";
+
+
+            using (var reader = new StreamReader(filePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                players = csv.GetRecords<Player>().ToList<Player>();
+            }
+
+            Display();
+        }
+
+        public void Display()
+        {
+            runDisplay.Text = "";
+
+            foreach (Player item in players)
+            {
+                runDisplay.Text += item.ToString() + "\n";
+            }
+        }
 
 
     } // class
